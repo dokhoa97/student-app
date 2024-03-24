@@ -1,0 +1,230 @@
+{
+    "student": [
+        {
+            "fullname": "zexidisa@mailinator.com",
+            "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1150.jpg",
+            "gender": false,
+            "email": "koqot@mailinator.com",
+            "mobile": "+1 (841) 399-9476",
+            "dob": "2024-03-21T17:00:00.000Z",
+            "department": {
+                "name": "FullStack Developer",
+                "id": "3"
+            },
+            "id": "1"
+        },
+        {
+            "fullname": "Charlotte Gleichner",
+            "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1067.jpg",
+            "gender": false,
+            "email": "Thad.Mills@gmail.com",
+            "mobile": "281-351-2871",
+            "dob": "1998-08-25T03:23:06.511Z",
+            "department": {
+                "name": "Project Manager",
+                "id": "2"
+            },
+            "id": "2"
+        },
+        {
+            "fullname": "Tami Beahan",
+            "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/658.jpg",
+            "gender": false,
+            "email": "Alan.Hyatt16@hotmail.com",
+            "mobile": "985-727-0379",
+            "dob": "1996-12-07T18:47:30.980Z",
+            "department": {
+                "name": "FullStack Developer",
+                "id": "3"
+            },
+            "id": "3"
+        },
+        {
+            "fullname": "Miss Melba Bartoletti111",
+            "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/365.jpg",
+            "gender": false,
+            "email": "Kaitlyn.Bode@yahoo.com",
+            "mobile": "445-854-5020",
+            "dob": "1947-05-31T16:00:00.000Z",
+            "department": {
+                "name": "Senior Dev",
+                "id": "4"
+            },
+            "id": "4"
+        },
+        {
+            "fullname": "Galena Bryant",
+            "avatarUrl": "https://randomuser.me/api/portraits/men/6.jpg",
+            "gender": true,
+            "email": "nopixawu@mailinator.com",
+            "mobile": "+1 (544) 107-5354",
+            "dob": "1994-11-06T17:00:00.000Z",
+            "department": {
+                "name": "FrontEnd Developer",
+                "id": "1"
+            },
+            "id": "5"
+        },
+        {
+            "fullname": "Christopher Parrish",
+            "avatarUrl": "https://randomuser.me/api/portraits/women/50.jpg",
+            "gender": false,
+            "email": "pykidy@mailinator.com",
+            "mobile": "+1 (861) 779-7409",
+            "dob": "1987-05-13T17:00:00.000Z",
+            "department": {
+                "name": "Senior Dev",
+                "id": "4"
+            },
+            "id": "6"
+        },
+        {
+            "fullname": "Germane Potter",
+            "avatarUrl": "https://randomuser.me/api/portraits/men/84.jpg",
+            "gender": true,
+            "email": "lyhuqyji@mailinator.com",
+            "mobile": "+1 (106) 507-6284",
+            "dob": "2006-11-13T17:00:00.000Z",
+            "department": {
+                "name": "Project Manager",
+                "id": "2"
+            },
+            "id": "7"
+        },
+        {
+            "fullname": "Amelia Hart",
+            "avatarUrl": "https://randomuser.me/api/portraits/women/22.jpg",
+            "gender": false,
+            "email": "nilywi@mailinator.com",
+            "mobile": "+1 (281) 332-9656",
+            "dob": "2019-01-04T17:00:00.000Z",
+            "department": {
+                "name": "FullStack Developer",
+                "id": "3"
+            },
+            "id": "8"
+        },
+        {
+            "fullname": "Pearl Moses",
+            "avatarUrl": "https://randomuser.me/api/portraits/men/75.jpg",
+            "gender": true,
+            "email": "vodecog@mailinator.com",
+            "mobile": "+1 (722) 944-9677",
+            "dob": "1987-05-23T17:00:00.000Z",
+            "department": {
+                "name": "Senior Dev",
+                "id": "4"
+            },
+            "id": "9"
+        },
+        {
+            "fullname": "Dexter Silva",
+            "avatarUrl": "https://randomuser.me/api/portraits/men/44.jpg",
+            "gender": true,
+            "email": "miciledi@mailinator.com",
+            "mobile": "+1 (714) 289-1091",
+            "dob": "2014-04-17T17:00:00.000Z",
+            "department": {
+                "name": "Senior Dev",
+                "id": "4"
+            },
+            "id": "10"
+        },
+        {
+            "fullname": "Callie May",
+            "avatarUrl": "https://randomuser.me/api/portraits/men/44.jpg",
+            "gender": true,
+            "email": "curisi@mailinator.com",
+            "mobile": "+1 (281) 125-2185",
+            "dob": "2011-10-23T17:00:00.000Z",
+            "department": {
+                "name": "Senior Dev",
+                "id": "4"
+            },
+            "id": "11"
+        },
+        {
+            "fullname": "Tarik Blackburn",
+            "avatarUrl": "https://randomuser.me/api/portraits/men/10.jpg",
+            "gender": true,
+            "email": "fubybavoq@mailinator.com",
+            "mobile": "+1 (155) 382-1921",
+            "dob": "2006-12-20T17:00:00.000Z",
+            "department": {
+                "name": "Project Manager",
+                "id": "2"
+            },
+            "id": "12"
+        },
+        {
+            "fullname": "Rhiannon Caldwell",
+            "avatarUrl": "https://randomuser.me/api/portraits/men/14.jpg",
+            "gender": true,
+            "email": "depibypete@mailinator.com",
+            "mobile": "+1 (274) 897-4691",
+            "dob": "1988-03-27T17:00:00.000Z",
+            "department": {
+                "name": "FullStack Developer",
+                "id": "3"
+            },
+            "id": "13"
+        },
+        {
+            "fullname": "Lilah Bowman",
+            "avatarUrl": "https://randomuser.me/api/portraits/men/7.jpg",
+            "gender": true,
+            "email": "lujin@mailinator.com",
+            "mobile": "+1 (487) 918-4492",
+            "dob": "2003-05-07T17:00:00.000Z",
+            "department": {
+                "name": "FullStack Developer",
+                "id": "3"
+            },
+            "id": "14"
+        },
+        {
+            "fullname": "Pandora Alston",
+            "avatarUrl": "https://randomuser.me/api/portraits/men/75.jpg",
+            "gender": true,
+            "email": "morususy@mailinator.com",
+            "mobile": "+1 (102) 665-1179",
+            "dob": "1986-11-01T17:00:00.000Z",
+            "department": {
+                "name": "FrontEnd Developer",
+                "id": "1"
+            },
+            "id": "15"
+        },
+        {
+            "fullname": "Laura Grimes",
+            "avatarUrl": "https://randomuser.me/api/portraits/women/57.jpg",
+            "gender": false,
+            "email": "lizibe@mailinator.com",
+            "mobile": "+1 (134) 661-2207",
+            "dob": "2006-03-18T17:00:00.000Z",
+            "department": {
+                "name": "Project Manager",
+                "id": "2"
+            },
+            "id": "16"
+        }
+    ],
+    "department": [
+        {
+            "name": "FrontEnd Developer",
+            "id": "1"
+        },
+        {
+            "name": "Project Manager",
+            "id": "2"
+        },
+        {
+            "name": "FullStack Developer",
+            "id": "3"
+        },
+        {
+            "name": "Senior Dev",
+            "id": "4"
+        }
+    ]
+}
