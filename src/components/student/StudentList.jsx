@@ -12,6 +12,8 @@ export default function StudentList() {
     const [selectedStudent, setSelectedStudent] = useState(null)
     const [show, setShow] = useState(false)
     const [studentId, setStudentId] = useState(null)
+    const [totalPages, setTotalPages] = useState(0)
+    const [text, setText] = useState('')
     const [filters, setFilters] = useState({
         searchText: '',
         sort: 'fullname',
@@ -23,13 +25,22 @@ export default function StudentList() {
     useEffect(() => {
         setLoading(true)
         async function getStudentList() {
-            let res = await fetch(`http://localhost:8000/student?_page=${filters?.page}&_limit=${filters?.limit}&?_sort=${filters.sort}`)
+            let res = await fetch(`http://localhost:8000/student?_page=${filters?.page}&_limit=${filters?.limit}&_sort=${filters.sort}&_order=${filters.order}&fullname_like=${filters.searchText}`)
             let data = await res.json()
             setStudentList(data)
             setLoading(false)
         }
         getStudentList()
-    }, [selectedStudent, studentId, filters?.page, filters.limit, filters.sort])
+    }, [selectedStudent, studentId, filters])
+    useEffect(() => {
+        async function getTotalRows() {
+            let totalRes = await fetch(`http://localhost:8000/student?fullname_like=${filters.searchText}`)
+            let data = await totalRes.json()
+            let totalPage = Math.ceil(Number(data.length) / Number(filters.limit))
+            setTotalPages(totalPage)
+        }
+        getTotalRows()
+    }, [filters.limit, filters.searchText])
     const handleRemove = (student) => {
         Swal.fire({
             title: "Are you sure to delete this student?",
@@ -61,11 +72,13 @@ export default function StudentList() {
         setStudentId(student?.id)
     }
     const handleNextPage = () => {
-        setFilters({
-            ...filters,
-            page: Number(filters.page) + 1,
-            direction: 'next'
-        })
+        if (filters.page < totalPages) {
+            setFilters({
+                ...filters,
+                page: Number(filters.page) + 1,
+                direction: 'next'
+            })
+        }
     }
     const handlePreviousPage = () => {
         if (Number(filters.page) > 1) {
@@ -87,18 +100,32 @@ export default function StudentList() {
             ...filters,
             sort: e.target.value
         })
-        console.log(e.target.value);
+    }
+    const handleOrder = (e) => {
+        setFilters({
+            ...filters,
+            order: e.target.value
+        })
+    }
+    const hanleSearch = (e) => {
+        e.preventDefault()
+        setFilters({
+            ...filters,
+            searchText: text
+        })
     }
     return (
         <>
             <div className="d-flex align-items-center justify-content-between my-2">
-                <form className="d-flex align-items-center w-50">
+                <form onSubmit={hanleSearch}
+                    className="d-flex align-items-center w-50">
                     <input
                         type="text"
                         className="form-control form-control-sm"
                         placeholder="search..."
+                        onInput={e => setText(e.target.value)}
                     />
-                    <FaSearch size={20} className="text-secondary" style={{ marginLeft: '-23px' }} />
+                    <FaSearch type="submit" size={20} className="text-secondary" style={{ marginLeft: '-23px' }} />
                 </form>
                 <div className="d-flex align-items-center">
                     <div className="d-flex align-items-center me-2">
@@ -113,9 +140,12 @@ export default function StudentList() {
                     </div>
                     <div className="d-flex align-items-center">
                         <span className="me-2">Sort</span>
-                        <select className="form-select form-select-sm">
-                            <option value="asc">Asc</option>
-                            <option value="desc">Desc</option>
+                        <select className="form-select form-select-sm"
+                            defaultValue={'asc'}
+                            onChange={e => handleOrder(e)}
+                        >
+                            <option value="asc">Ascendent</option>
+                            <option value="desc">Descendent</option>
                         </select>
                     </div>
                 </div>
@@ -171,10 +201,10 @@ export default function StudentList() {
             }
             <div className="d-flex align-items-center justify-content-between">
                 <ul className="pagination">
-                    <li className={`page-item ${filters.direction === 'pre' ? 'active' : ''} ${filters.page < -1 ? 'disabled' : ''}`}>
+                    <li className={`page-item ${filters.direction === 'pre' ? 'active' : ''} ${Number(filters.page) == 1 ? 'disabled' : ''}`}>
                         <button className="page-link" onClick={handlePreviousPage}>Previous</button>
                     </li>
-                    <li className={`page-item ${filters.direction === 'next' ? 'active' : ''}`}>
+                    <li className={`page-item ${filters.direction === 'next' ? 'active' : ''} ${Number(filters.page) == Number(totalPages) ? 'disabled' : ''}`}>
                         <button className="page-link" onClick={handleNextPage}>Next</button>
                     </li>
                 </ul>
@@ -187,6 +217,7 @@ export default function StudentList() {
                     >
                         <option value={5}>5</option>
                         <option value={10}>10</option>
+                        <option value={20}>20</option>
                     </select>
                 </div>
             </div>
